@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Examination Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Student Examination Result</h2>
+
+        <form action="StudentResultServlet" method="post">
+
+            <label>Register Number</label>
+            <input type="text" name="regno" required>
+
+            <label>Student Name</label>
+            <input type="text" name="name" required>
+
+            <label>Department</label>
+            <input type="text" name="department" required>
+
+            <label>Subject 1 Mark</label>
+            <input type="number" name="mark1"
+                   min="0" max="100" required>
+
+            <label>Subject 2 Mark</label>
+            <input type="number" name="mark2"
+                   min="0" max="100" required>
+
+            <label>Subject 3 Mark</label>
+            <input type="number" name="mark3"
+                   min="0" max="100" required>
+
+            <label>Subject 4 Mark</label>
+            <input type="number" name="mark4"
+                   min="0" max="100" required>
+
+            <label>Subject 5 Mark</label>
+            <input type="number" name="mark5"
+                   min="0" max="100" required>
+
+            <label>Attendance Percentage</label>
+            <input type="number" name="attendance"
+                   min="0" max="100"
+                   step="0.01" required>
+
+            <input type="submit" value="Calculate Result">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
